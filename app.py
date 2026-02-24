@@ -1,11 +1,21 @@
 import feedparser
 import os
-import Config  # <--- This connects to your new config.py
+import config  # <--- This connects to your new config.py
 from flask import Flask, jsonify
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
+from flask import request, abort
 
+
+@app.route('/fetch', methods=['GET'])
+def run_pipeline():
+    # 1. Check for the secret key in the header
+    api_key = request.headers.get('X-API-Key')
+    if api_key != "MySecretProjectKey2026":  # Use your own secret string here
+        abort(401)  # If it doesn't match, tell them "Unauthorized"
+
+    # ... rest of your code ...
 app = Flask(__name__)
 
 
