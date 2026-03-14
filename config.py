@@ -14,6 +14,8 @@ SOURCES = {
     ],
     "Tools": [
         #"https://venturebeat.com/category/ai/feed/",
-        "https://aiacceleratorinstitute.com/rss/"
+        #"https://aiacceleratorinstitute.com/rss/"
+        "https://www.futurepedia.io/rss.xml",
+        "https://aitoolsguide.com/feed/"
     ]
 }
